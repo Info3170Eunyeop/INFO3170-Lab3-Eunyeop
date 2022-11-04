@@ -16,6 +16,10 @@
         <mat-icon>shopping_cart</mat-icon>
         <span>Shopping Cart</span>
       </a>
+      <a mat-menu-item routerLink="aboutUs">
+        <mat-icon>storefront</mat-icon>
+        <span>About us</span>
+      </a>
     </mat-menu>
     <span class="spacer"></span>
 
@@ -33,10 +37,6 @@
 </p>
 
 <nav>
-  <div>
-    <span>products</span>
-    <span>shopping cart</span>
-  </div>
   <a
     class="button"
     routerLink="products"
@@ -52,6 +52,14 @@
     aruaCurrentWhenActive="page"
   >
     Shopping Cart</a
+  >
+  <a
+    class="button"
+    routerLink="aboutUs"
+    routerLinkActive="activebutton"
+    aruaCurrentWhenActive="page"
+  >
+    About Us</a
   >
 </nav>
 <router-outlet></router-outlet>
