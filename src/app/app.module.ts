@@ -15,17 +15,21 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductComponent } from './components/product/product.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot([
+      { path: 'aboutUs', component: AboutUsComponent },
+      { path: 'contactUs', component: ContactUsComponent },
       { path: 'products', component: ProductsListComponent },
+      { path: 'items', component: ProductsListComponent },
+      { path: 'shopping', component: ProductsListComponent },
       { path: 'productlist', redirectTo: '/products', pathMatch: 'full' },
       { path: 'cart', component: ShoppingCartComponent },
-      { path: '', redirectTo: '/products', pathMatch: 'full' },
+      { path: '', redirectTo: '/aboutUs', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent },
-      { path: 'aboutUs', component: AboutUsComponent },
     ]),
     FormsModule,
     MatToolbarModule,
@@ -37,11 +41,12 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
   ],
   declarations: [
     AppComponent,
+    AboutUsComponent,
     ProductsListComponent,
     ShoppingCartComponent,
     PageNotFoundComponent,
     ProductComponent,
-    AboutUsComponent,
+    ContactUsComponent,
   ],
   bootstrap: [AppComponent],
 })

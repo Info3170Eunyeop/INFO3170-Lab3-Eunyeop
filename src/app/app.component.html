@@ -20,6 +20,10 @@
         <mat-icon>storefront</mat-icon>
         <span>About us</span>
       </a>
+      <a mat-menu-item routerLink="contactUs">
+        <mat-icon>contact_phone</mat-icon>
+        <span>Contact us</span>
+      </a>
     </mat-menu>
     <span class="spacer"></span>
 
@@ -35,7 +39,6 @@
     </button>
   </mat-toolbar>
 </p>
-
 <nav>
   <a
     class="button"
@@ -61,5 +64,14 @@
   >
     About Us</a
   >
+  <a
+    class="button"
+    routerLink="contactUs"
+    routerLinkActive="activebutton"
+    aruaCurrentWhenActive="page"
+  >
+    Contact Us</a
+  >
 </nav>
+
 <router-outlet></router-outlet>
